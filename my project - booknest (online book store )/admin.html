@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+</head>
+<body>
+
+<h2>Admin - Add Book</h2>
+
+<input type="text" id="bookTitle" placeholder="Book Title"><br><br>
+<input type="number" id="bookPrice" placeholder="Book Price"><br><br>
+<button onclick="addBook()">Add Book</button>
+
+<script src="js/products.js"></script>
+
+<script>
+function addBook() {
+    const title = document.getElementById("bookTitle").value;
+    const price = document.getElementById("bookPrice").value;
+
+    const newBook = {
+        id: products.length + 1,
+        title: title,
+        price: Number(price)
+    };
+
+    products.push(newBook);
+
+    alert("Book Added Successfully!");
+}
+</script>
+
+</body>
+</html>
